@@ -5,7 +5,7 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -43,6 +43,8 @@ gem 'simple_form'
 
 
 group :development, :test do
+	gem 'pg'
+
 	#the gem for minitest is arguable.... could just use regular minitest
 	gem 'minitest'
 	#gem "minitest-rails", git: "git://github.com/blowmage/minitest-rails.git"
