@@ -1,0 +1,20 @@
+====== SANDBOX TESTING =====
+
+Rails 3.2
+bootstrap-sass
+bootstrap-datepicker-rails
+sqlite3
+simple_form
+
+** to be added
+OAuth  (with weibo testing)
+
+
+Prod:
+pg
+
+Testing:
+minitest
+capybara
+spork
+factory_girl
