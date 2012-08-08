@@ -7,8 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- navigation -->
+	<%= render 'layouts/nav' %>
 
-<%= yield %>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<!-- print title here ? -->
 
+			<!-- flash messages -->		
+			<% flash.each do |name, msg| %>
+				<div class="alert alert-<%= name %>" id="flash"><%= msg %></div>
+			<% end %>
+		</div><!-- row -->
+
+		<div class="row-fluid">
+			<div class="span12">
+				<%= yield %>
+			</div>
+		</div><!-- row -->
+
+		<hr>
+		<footer>
+			<p>&copy; Airball Ventures 2012</p>
+		</footer>
+	</div><!-- container -->
 </body>
 </html>
+
+
+
