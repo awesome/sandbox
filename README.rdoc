@@ -1,9 +1,27 @@
+====== CHANGELOG ======
+
+
+====== To Do =======
+
+user profile page
+resume form builder
+
+
+Job postings index
+=> applications
+
+company profile page
+
+job form builder
+
+
+
+
 ====== SANDBOX TESTING =====
 
 Rails 3.2
 bootstrap-sass
 bootstrap-datepicker-rails
-sqlite3
 simple_form
 
 ** to be added
