@@ -1,5 +1,7 @@
 Sandbox::Application.routes.draw do
 
+  devise_for :users
+
   get "pages/main"
 
   #static pages

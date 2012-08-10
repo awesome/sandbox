@@ -1,8 +1,11 @@
 class ProductsController < ApplicationController
 
-
+  #autocomplete
   autocomplete :brand, :name, :full => true, :extra_data => [:code]
   
+  #authenticate
+  before_filter :authenticate_user!
+
 
   # GET /products
   # GET /products.json

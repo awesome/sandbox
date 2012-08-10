@@ -4,6 +4,21 @@
 		<div class="container-fluid">
 		    <a class="brand" href="#">Sandbox</a>
 
+		    <ul class="nav">
+		    </ul>
+
+
+			  <!-- pull right for signup/login -->
+			  <ul class="nav pull-right">
+					<% if user_signed_in? %>
+						<li>Hi, <%= current_user.email %></li>
+						<li>Log out</li>
+					<% else %>
+						<li>Sign up</li>
+						<li>Log in</li>
+					<% end %>
+				</ul>
+
 		</div>
 	</div>
 </div>
