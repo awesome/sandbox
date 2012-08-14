@@ -4,6 +4,6 @@ class Recruiter < ActiveRecord::Base
 
   validates_presence_of :name, :phone, :address, :user
 
-  has_one :user, :as => :role
+  belongs_to :user, :as => :role
 
 end

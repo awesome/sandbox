@@ -19,7 +19,7 @@
           						<b class="caret"></b>
     						</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Settings</a></li>
+								<li><%= link_to 'Settings', edit_member_path(current_user.role) %></li>
 								<li><%= link_to 'Log out', destroy_user_session_path, :method=> :delete %></li>
 							</ul><!-- dropdown menu -->
 						</li><!-- dropdown -->
@@ -34,12 +34,10 @@
 							<ul class="dropdown-menu dropdown-form">
 								<li>
 									<%= render 'layouts/dropdown_signin' %>
-
 								</li>
 							</ul><!-- dropdown menu -->
 						</li><!-- dropdown -->
-						<li><%= link_to 'Log in', new_user_session_path %></li>
-						<li><%= link_to 'Sign up', new_user_registration_path %></li>
+						<li><%= link_to 'Sign up', new_member_path %></li>
 						
 					<% end %>
 				</ul>

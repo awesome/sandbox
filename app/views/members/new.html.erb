@@ -1,0 +1,36 @@
+
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    	$('.datepicker').datepicker({
+			format: "yyyy-mm-dd"
+		});
+  });
+</script>
+
+<h2>Sign up</h2>
+Create your resume account!
+
+<%= simple_form_for @member do |f| %>
+	
+	<%= f.fields_for :user do |u| %>
+	  <div class="form-inputs">
+	  	<%= u.input :username, :required=> true, :autofocus => true %>
+	    <%= u.input :email, :required => true %>
+	    <%= u.input :password, :required => true %>
+	    <%= u.input :password_confirmation, :required => true %>
+	  </div>
+	<% end %>
+
+	<%= f.input :name, :required => true %>
+	<%= f.input :dob, :as=>:string, :input_html => { :class => 'datepicker' } %>
+	<%= f.input :sex, :collection => [['M','男'], ['F','女']], :as => :radio_buttons, 
+				:item_wrapper_class => 'inline'%>
+	<%= f.input :mobile_phone, :as => :tel %>
+	<%= f.input :address, :as=> :text %> 
+	<%= f.input :city %>
+
+<div class="form-actions">
+	<%= f.button :submit, "Sign up" %>
+</div>
+<% end %>

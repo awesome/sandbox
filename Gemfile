@@ -25,6 +25,7 @@ gem 'rails3-jquery-autocomplete'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
+gem 'nested_form'
 gem 'devise'
 
 # To use ActiveModel has_secure_password

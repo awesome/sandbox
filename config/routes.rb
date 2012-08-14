@@ -8,18 +8,21 @@ Sandbox::Application.routes.draw do
 
   #devise paths
   devise_for :users
+  #devise_for :users, :controllers => {:registrations => "registrations"}
   # get  'users/sign_up'   => 'users/registrations#new',        :as => 'new_user_registration'
 # get  'recruiter/sign_up' => 'users/registrations#new_recruiter, :as => 'new_recruiter_registration'
 # post 'recruiter/sign_up' => 'users/registrations#create',     :as => 'recruiter_registration'
-# get  'members/sign_up' => 'users/registrations#new_member', :as => 'new_member_registration'
-# post 'members/sign_up' => 'users/registrations#create',     :as => 'member_registration'
+  #get  'members/sign_up' => 'users/registrations#new_member', :as => 'new_member_registration'
+  #post 'members/sign_up' => 'users/registrations#create',     :as => 'member_registration'
 
 
 
 
   #scaffold resources
-  resources :brands
+  resources :members
 
+  #demo 
+  resources :brands
   resources :products do
     get :autocomplete_brand_name, :on => :collection
   end
