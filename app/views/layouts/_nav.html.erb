@@ -33,21 +33,7 @@
     						</a>
 							<ul class="dropdown-menu dropdown-form">
 								<li>
-									<%= form_tag(user_session_path, :class=> 'signin well') do %>
-									<fieldset class="textbox">
-										<%= label_tag 'email', 'Email' %>									
-										<%= text_field_tag 'email', nil, :class=>'input-medium' %> 
-										<%= label_tag 'password', 'Password' %>
-										<%= password_field_tag 'password', nil, :class=>'input-medium' %>
-									</fieldset>
-									<fieldset class="subchk">
-										<label class="remember">
-											<input type="checkbox" value="1" name="remember_me">
-											<span>Remember me</span>
-										</label>	
-										<button type="submit" class="btn submit">Sign in</button>
-									</fieldset>
-									<% end %>
+									<%= render 'layouts/dropdown_signin' %>
 
 								</li>
 							</ul><!-- dropdown menu -->
