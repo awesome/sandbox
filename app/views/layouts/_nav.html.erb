@@ -5,17 +5,56 @@
 		    <a class="brand" href="#">Sandbox</a>
 
 		    <ul class="nav">
+
 		    </ul>
 
 
 			  <!-- pull right for signup/login -->
 			  <ul class="nav pull-right">
 					<% if user_signed_in? %>
-						<li>Hi, <%= current_user.email %></li>
-						<li>Log out</li>
+						<!-- dropdown account menu -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          						Hi, <%= current_user.username %>
+          						<b class="caret"></b>
+    						</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Settings</a></li>
+								<li><%= link_to 'Log out', destroy_user_session_path, :method=> :delete %></li>
+							</ul><!-- dropdown menu -->
+						</li><!-- dropdown -->
 					<% else %>
-						<li>Sign up</li>
-						<li>Log in</li>
+
+						<!-- dropdown log-in  -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          						JS Login Form
+          						<b class="caret"></b>
+    						</a>
+							<ul class="dropdown-menu dropdown-form">
+								<li>
+									<%= form_tag(user_session_path, :class=> 'signin well') do %>
+									<fieldset class="textbox">
+										<%= label_tag 'email', 'Email' %>									
+										<%= text_field_tag 'email', nil, :class=>'input-medium' %> 
+										<%= label_tag 'password', 'Password' %>
+										<%= password_field_tag 'password', nil, :class=>'input-medium' %>
+									</fieldset>
+									<fieldset class="subchk">
+										<label class="remember">
+											<input type="checkbox" value="1" name="remember_me">
+											<span>Remember me</span>
+										</label>	
+										<button type="submit" class="btn submit">Sign in</button>
+									</fieldset>
+									<% end %>
+
+								</li>
+							</ul><!-- dropdown menu -->
+						</li><!-- dropdown -->
+						<li><%= link_to 'Log in', new_user_session_path %></li>
+						<li><%= link_to 'Sign up', new_user_registration_path %></li>
+						
 					<% end %>
 				</ul>
 

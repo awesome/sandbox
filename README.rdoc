@@ -15,24 +15,6 @@ company profile page
 job form builder
 
 
+====== gems to be integrated =====
 
-
-====== SANDBOX TESTING =====
-
-Rails 3.2
-bootstrap-sass
-bootstrap-datepicker-rails
-simple_form
-
-** to be added
 OAuth  (with weibo testing)
-
-
-Prod:
-pg
-
-Testing:
-minitest
-capybara
-spork
-factory_girl
